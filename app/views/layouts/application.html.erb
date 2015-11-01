@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ecommerce</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximun-scale=1,user-scalable=no">
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div style="<%= "display: none;" if notice.nil? && alert.nil? %>">
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+		</div>
+		<%= yield %>
+	</body>
+</html>
