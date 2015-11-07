@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+	resources :attachments, only: [:new,:create,:destroy]
     resources :products
 	devise_for :users
 
