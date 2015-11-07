@@ -18,4 +18,11 @@
 
 		%div
 			%h3.grey-text Archivos
+			%ol
+				- @product.attachments.each do |attachment|
+					%li.large-padding.medium.grey-text.other-grey
+						.col-xs-11.inline-block= link_to attachment.archivo_file_name, attachment
+						.col-xs-1.inline-block
+							= link_to attachment, method: :delete, data: { confirm: "¿Estas seguro de eliminar este archivo?" }, class: "red-text" do
+								%i.mdi-action-dashboard
 			= render "attachments/form", product_id: @product.id
