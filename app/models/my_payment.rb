@@ -1,20 +1,17 @@
 # == Schema Information
 #
-# Table name: my_emails
+# Table name: my_payments
 #
 #  id         :integer          not null, primary key
 #  email      :string
 #  ip         :string
-#  state      :integer
+#  status     :string
+#  fee        :decimal(6, 2)
+#  paypal_id  :string
+#  total      :decimal(8, 2)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-FactoryGirl.define do
-  factory :my_email do
-    email "MyString"
-ip "MyString"
-state 1
-  end
-
+class MyPayment < ActiveRecord::Base
 end

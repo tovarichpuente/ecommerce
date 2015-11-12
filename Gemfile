@@ -16,6 +16,10 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 ##Tema material design para bootstrap
 gem 'bootstrap-material-design'
+##Paypal SDK
+gem 'paypal-sdk-rest'
+##Anotacion de los modelos
+gem 'annotate'
 
 group :development, :test do
   gem 'byebug'
