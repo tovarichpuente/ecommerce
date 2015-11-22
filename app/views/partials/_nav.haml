@@ -5,10 +5,10 @@
 			%li.col-md-4.inline-block.tall-padding
 				-if user_signed_in?
 					= link_to root_path, class: "white-text right-space" do
-						%i.mdi-action-shopping-basket
+						%i.mdi-action-shop
 						Mi tienda
 					= link_to "", class: "white-text right-space" do
-						%i.mdi-action-trending-up
+						%i.mdi-action-translate
 						Ordenes
 					= link_to "", class: "white-text right-space" do
 						%i.mdi-action-alarm
@@ -17,4 +17,8 @@
 				=image_tag "tiendus.png", height: "25px"
 			%li.col-md-4.inline-block.tall-padding
 				=link_to carrito_path, class: "white-text" do
+					%i.mdi-action-shop-two
 					Mi Carrito
+					(
+					= @shopping_cart.products.count
+					)
